@@ -24,7 +24,6 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'binding_of_caller'
-  gem 'launchy'
   gem 'codeclimate-test-reporter', require: nil
   gem 'simplecov'
   gem 'database_cleaner'
