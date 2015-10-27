@@ -8,10 +8,24 @@
       <div class="row">
       </div>
       <div class="col s4 right">
-        <%= image_tag "#{current_user.image_url}", class: "responsive-img circle z-depth-2" %>
+        <a class="modal-trigger" href="#modal1">
+          <%= image_tag "#{current_user.image_url}", class: "responsive-img circle z-depth-2" %>
+        </a>
       </div>
       <div class="col s8 left">
         <h1 class="center right">Welcome, <%= current_user.nickname %></h1>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4> Github Summary:</h4>
+            <%= image_tag "#{current_user.image_url}", class: "responsive-img circle z-depth-2" %>
+            <p><strong>Followers:</strong> <%= current_user.followers %></p>
+            <p><strong>Following:</strong> <%= current_user.following %></p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col s4 stats">
