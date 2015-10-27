@@ -4,61 +4,9 @@
   <% if !current_user  %>
     <h1>Welcome to git-curious</h1>
   <% else %>
-    <div class="col s12 name-banner blue-grey lighten-5">
-      <div class="row">
-      </div>
-      <div class="col s4 right">
-        <a class="modal-trigger" href="#modal1">
-          <%= image_tag "#{current_user.image_url}", class: "responsive-img circle z-depth-2" %>
-        </a>
-      </div>
-      <div class="col s8 left">
-        <h1 class="center right">Welcome, <%= current_user.nickname %></h1>
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4> Github Summary:</h4>
-            <%= image_tag "#{current_user.image_url}", class: "responsive-img circle z-depth-2" %>
-            <p><strong>Followers:</strong> <%= current_user.followers %></p>
-            <p><strong>Following:</strong> <%= current_user.following %></p>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col s4 stats">
-      <h5>Contributions in the last year</h5>
-    </div>
-    <div class="col s4 stats">
-      <h5>Longest streak</h5>
-    </div>
-    <div class="col s4 stats">
-      <h5>Current streak</h5>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <ul class="tabs">
-          <li class="tab col s3"><a href="#test1">Commits</a></li>
-          <li class="tab col s3"><a href="#test2">Repositories</a></li>
-          <li class="tab col s3"><a href="#test3">Followers</a></li>
-          <li class="tab col s3"><a href="#test4">Following</a></li>
-        </ul>
-      </div>
-      <div id="test1" class="col s12">
-        <%= render "commits" %>
-      </div>
-      <div id="test2" class="col s12">
-        <%= render 'repositories' %>
-      </div>
-      <div id="test3" class="col s12">
-        <%= render "followers" %>
-      </div>
-      <div id="test4" class="col s12">
-        <%= render "following" %>
-      </div>
-    </div>
+    <%= render 'name_banner' %>
+    <%= render 'general_stats' %>
+    <%= render 'listed_stats' %>
     <% end %>
   </div>
 </main>
