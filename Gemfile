@@ -13,6 +13,7 @@ gem 'omniauth-github'
 gem 'figaro'
 gem 'hurley'
 gem 'web-console', '~> 2.0'
+gem 'materialize-sass'
 #gem 'githubstats'
 
 # gem 'bcrypt', '~> 3.1.7'
