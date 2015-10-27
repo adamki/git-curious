@@ -1,3 +1,7 @@
 @import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
+$primary-color: color("cyan", "darken-4") !default;
 @import 'materialize';
+@import 'footer';
+@import 'override';
+
+

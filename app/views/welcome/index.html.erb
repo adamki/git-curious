@@ -1,8 +1,44 @@
-<h1>Welcome to Git-Curious</h1>
-
-<% if current_user %>
-  <p>Welcome, <%= current_user.nickname %></p>
-  <%= link_to 'Logout', logout_path %>
-<% else %>
-  <%= link_to 'Login with Github', login_path %>
-<% end %>
+<main>
+  <div class="row">
+    <div class="col s12">
+      <% if !current_user  %>
+        <h1>Welcome to git-curious</h1>
+      <% else %>
+        <div class="col s12 name-banner blue-grey lighten-5">
+          <h1 class="center">Welcome, <%= current_user.nickname %></h1>
+          <div class="col s4 stats">
+            <h5>Contributions in the last year</h5>
+          </div>
+          <div class="col s4 stats">
+            <h5>Longest streak</h5>
+          </div>
+          <div class="col s4 stats">
+            <h5>Current streak</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s3"><a href="#test1">Commits</a></li>
+              <li class="tab col s3"><a href="#test2">Repositories</a></li>
+              <li class="tab col s3"><a href="#test3">Followers</a></li>
+              <li class="tab col s3"><a href="#test4">Following</a></li>
+            </ul>
+          </div>
+          <div id="test1" class="col s12">
+            <%= render "commits" %>
+          </div>
+          <div id="test2" class="col s12">
+            <%= render 'repositories' %>
+          </div>
+          <div id="test3" class="col s12">
+            <%= render "followers" %>
+          </div>
+          <div id="test4" class="col s12">
+            <%= render "following" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</main>

@@ -12,6 +12,11 @@
 //
 //= require jquery
 //= require materialize-sprockets
-//= require materialize/extras/nouislider
 //= require jquery_ujs
 //= require_tree .
+
+
+
+$( document ).ready(function(){
+  $(".button-collapse").sideNav();
+})

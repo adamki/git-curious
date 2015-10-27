@@ -1,0 +1,18 @@
+/****************************************
+Reduce all font to light
+ ***************************************/
+*, h1, h2, h3, h4, h5,h6 {
+  font-weight: 200;
+}
+
+.name-banner{
+  height: 350px;
+  h1{
+    margin-bottom: 50px;
+  }
+}
+
+.stats{
+  height: 200px;
+  text-align: center;
+}
