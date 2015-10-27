@@ -7,6 +7,8 @@ Reduce all font to light
 
 .name-banner{
   height: 350px;
+  border-bottom: 1px grey solid;
+  padding-bottom: 20px;
   h1{
     margin-bottom: 50px;
   }
@@ -15,4 +17,9 @@ Reduce all font to light
 .stats{
   height: 200px;
   text-align: center;
+  &:nth-child(3) {
+    border-left: 1px lightgrey solid;
+    border-right: 1px lightgrey solid;
+  }
 }
+
