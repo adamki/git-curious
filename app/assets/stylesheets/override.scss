@@ -9,8 +9,12 @@ Reduce all font to light
   height: 350px;
   border-bottom: 1px grey solid;
   padding-bottom: 20px;
+  padding-top: 90px;
   h1{
     margin-bottom: 50px;
+  }
+  .row{
+    height: 50px;
   }
 }
 
@@ -23,3 +27,8 @@ Reduce all font to light
   }
 }
 
+.responsive-img  {
+  width: 150px;
+  margin-left: 30px;
+  border: 1px grey solid;
+}
