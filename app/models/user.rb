@@ -1,11 +1,17 @@
 class User < ActiveRecord::Base
   def self.from_omniauth(auth)
-    where(uid: auth[:uid]).first_or_create do |new_user|
-      new_user.nickname           = auth.info.nickname
-      new_user.uid                = auth.uid
-      new_user.oauth_token        = auth.credentials.token
-      new_user.email              = auth.info.email
-      new_user.image_url          = auth.info.image
-    end
+    user = find_or_create_by(uid: auth[:uid])
+
+    user.update_attributes(
+      nickname:    auth.info.nickname,
+      oauth_token: auth.credentials.token,
+      email:       auth.info.email,
+      image_url:   auth.info.image,
+      followers:   auth.extra.raw_info.followers,
+      following:   auth.extra.raw_info.following,
+
+    )
+
+    user
   end
 end
