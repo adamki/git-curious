@@ -21,6 +21,7 @@ Reduce all font to light
 .stats{
   height: 200px;
   text-align: center;
+  border-bottom:1px lightgrey solid;
   &:nth-child(3) {
     border-left: 1px lightgrey solid;
     border-right: 1px lightgrey solid;
