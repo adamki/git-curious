@@ -15,7 +15,6 @@ gem 'hurley'
 gem 'web-console', '~> 2.0'
 gem 'materialize-sass'
 gem 'rails_12factor'
-gem 'better_errors'
 gem 'githubstats'
 
 
@@ -29,17 +28,18 @@ group :development, :test do
   gem 'pry-rails'
   gem 'binding_of_caller'
   gem 'codeclimate-test-reporter', require: nil
+  gem 'better_errors'
   gem 'simplecov'
   gem 'database_cleaner'
 end
 
 group :development do
   gem 'spring'
-
 end
 
 group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'vcr'
+  gem 'webmock'
 end

@@ -21,11 +21,6 @@ class GithubPresenter
     following.map {|followed_user| followed_user.login }
   end
 
-  def commits_for_owned_repos
-    commits = service.commits_in_last_year(user).reduce(0) do |sum, week|
-      sum + week[:owner].reduce(:+)
-    end
-  end
 
   private
     def build_object(data)
