@@ -1,4 +1,4 @@
-class Github
+class GithubService
   attr_reader :connection, :user
 
   def initialize(user)
