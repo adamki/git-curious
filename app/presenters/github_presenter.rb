@@ -16,6 +16,11 @@ class GithubPresenter
     followers.map {|follower| follower.login }
   end
 
+  def following
+    following = service.find_user_following(user).map {|data| build_object(data)}
+    following.map {|followed_user| followed_user.login }
+  end
+
   def commits_for_owned_repos
     commits = service.commits_in_last_year(user).reduce(0) do |sum, week|
       sum + week[:owner].reduce(:+)
@@ -23,7 +28,6 @@ class GithubPresenter
   end
 
   private
-
     def build_object(data)
       OpenStruct.new(data)
     end

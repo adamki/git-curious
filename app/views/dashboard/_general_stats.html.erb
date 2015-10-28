@@ -1,12 +1,18 @@
 <div class="col s4 stats">
   <h5>Contributions in the last year</h5>
   <h1>
-    <%= @response.commits_for_owned_repos %>
+    <%= @github_stats.annual_contributions %>
   </h1>
 </div>
 <div class="col s4 stats">
   <h5>Longest streak</h5>
+  <h1>
+    <%= @github_stats.longest_streak%>
+  </h1>
 </div>
 <div class="col s4 stats">
   <h5>Current streak</h5>
+  <h1>
+    <%= @github_stats.current_streak%>
+  </h1>
 </div>

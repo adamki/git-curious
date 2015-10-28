@@ -15,6 +15,10 @@ class GithubService
     parse(connection.get("users/#{user.nickname}/followers"))
   end
 
+  def find_user_following(user)
+    parse(connection.get("users/#{user.nickname}/following"))
+  end
+
   def commits_in_last_year(user)
     find_user_repos(user).map do |repo|
       parse(connection.get("/repos/#{user.nickname}/#{repo[:name]}/stats/participation"))

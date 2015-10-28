@@ -1,4 +1,4 @@
-<h4>Following</h4>
+<h4>Followers</h4>
 <div class="col s12 m8 offset-m2 l6 offset-l3">
   <ul>
   <% @response.followers.each do |follower| %>
@@ -12,6 +12,9 @@
             <span class="black-text">
               <h3>
                 <%= follower %>
+
+
+
               </h3>
               <a class="btn-floating btn-small waves-effect waves-light red right"><i class="material-icons">add</i></a>
             </span>
