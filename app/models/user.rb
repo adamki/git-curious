@@ -11,7 +11,6 @@ class User < ActiveRecord::Base
       following:   auth.extra.raw_info.following,
 
     )
-
     user
   end
 end

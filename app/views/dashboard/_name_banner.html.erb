@@ -15,6 +15,7 @@
         <%= image_tag "#{current_user.image_url}", class: "responsive-img circle z-depth-2" %>
         <p><strong>Followers:</strong> <%= current_user.followers %></p>
         <p><strong>Following:</strong> <%= current_user.following %></p>
+        <p><strong>Total Repos:</strong> <%= pluralize(@response.repos.count, 'Repository') %></p>
       </div>
       <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>

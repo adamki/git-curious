@@ -15,7 +15,9 @@ gem 'hurley'
 gem 'web-console', '~> 2.0'
 gem 'materialize-sass'
 gem 'rails_12factor'
-#gem 'githubstats'
+gem 'better_errors'
+gem 'githubstats'
+
 
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
