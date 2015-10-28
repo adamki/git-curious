@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/adamki/repos?access_token=3df3249c5f371b4d58619f78855f479d244608c2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Hurley v0.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 28 Oct 2015 22:32:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '83'
+      Status:
+      - 401 Unauthorized
+      X-Github-Media-Type:
+      - github.v3
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '59'
+      X-Ratelimit-Reset:
+      - '1446075127'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Github-Request-Id:
+      - 4999852B:146C0:F8DC75:56314CE7
+    body:
+      encoding: UTF-8
+      string: '{"message":"Bad credentials","documentation_url":"https://developer.github.com/v3"}'
+    http_version: 
+  recorded_at: Wed, 28 Oct 2015 22:32:08 GMT
+recorded_with: VCR 2.9.3
