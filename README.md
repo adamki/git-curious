@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/adamki/git-curious.png?label=ready&title=Ready)](https://waffle.io/adamki/git-curious)
 # git-curious
 
 This is the first individual project of Module 3 at the Turing School. Students have to use an API, in this case Github, to build a clone of said platform.
