@@ -14,7 +14,7 @@ class GithubServiceTest < ActiveSupport::TestCase
     @service ||= GithubService.new(user)
   end
 
-  test "#find_user_repos" do
+  test "#find_user_repos test" do
     VCR.use_cassette('github_service#find_user_repos_test') do
       repos = service.find_user_repos(user)
       repo  = repos.first
@@ -22,7 +22,7 @@ class GithubServiceTest < ActiveSupport::TestCase
     end
   end
 
-  test "find_user_followers_count" do
+  test "find_user_followers_count test" do
     VCR.use_cassette('github_service#find_user_followers_test') do
       followers = service.find_user_followers(user)
       follower  = followers.first
@@ -30,7 +30,7 @@ class GithubServiceTest < ActiveSupport::TestCase
     end
   end
 
-  test 'find_users_followees_test' do
+  test 'find_users_followees_test test' do
     VCR.use_cassette('github_service#find_user_following') do
       following = service.find_user_following(user)
       assert_equal 19, following.count
