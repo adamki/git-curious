@@ -35,6 +35,10 @@ class GithubPresenter
     user[:avatar_url]
   end
 
+  def event(user)
+    events = service.find_user_events(user)
+    events.map {|event| event[:type]}
+  end
 
   private
     def build_object(data)

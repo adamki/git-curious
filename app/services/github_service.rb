@@ -34,6 +34,10 @@ class GithubService
     end
   end
 
+  def find_user_events(user)
+    parse(connection.get("users/#{user}/events"))
+  end
+
   private
 
     def parse(response)
