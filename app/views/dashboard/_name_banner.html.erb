@@ -10,12 +10,15 @@
     <h1 class="center right">Welcome, <%= current_user.nickname %></h1>
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
-      <div class="modal-content">
-        <h4> Github Summary:</h4>
+      <div class="modal-content center">
+        <h4> Github Summary for:</h4>
+        <h6><a href="http://github.com/#{<%= current_user.nickname %>}"><%= current_user.nickname %></a></h6>
         <%= image_tag "#{current_user.image_url}", class: "responsive-img circle z-depth-2" %>
         <p><strong>Followers:</strong> <%= current_user.followers %></p>
         <p><strong>Following:</strong> <%= current_user.following %></p>
         <p><strong>Total Repos:</strong> <%= pluralize(@response.repos.count, 'Repository') %></p>
+        <p><strong>Total Organizations:</strong> <%= @response.organizations.count %></p>
+        <p><strong>Total Commits:</strong> <%= @response.commits.count %></p>
       </div>
       <div class="modal-footer">
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
