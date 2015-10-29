@@ -30,10 +30,18 @@ class GithubServiceTest < ActiveSupport::TestCase
     end
   end
 
-  test 'find_users_followees_test test' do
+  test 'find_users_followees_test' do
     VCR.use_cassette('github_service#find_user_following') do
       following = service.find_user_following(user)
       assert_equal 19, following.count
     end
   end
+
+  test 'find_users_organizations_test' do
+    VCR.use_cassette('github_service#find_user_following') do
+      organization = service.find_user_organizations(user)
+      assert_equal 0, organization.count
+    end
+  end
+
 end

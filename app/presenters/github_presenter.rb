@@ -21,6 +21,11 @@ class GithubPresenter
     following.map {|followed_user| followed_user.login }
   end
 
+  def organizations
+    organizations = service.find_user_organizations(user).map {|data| build_object(data)}
+    organizations.map{ |organization| organization.login}
+  end
+
 
   private
     def build_object(data)

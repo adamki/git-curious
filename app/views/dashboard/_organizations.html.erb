@@ -1,0 +1,9 @@
+
+<h4>Organizations</h4>
+<ul class="collection">
+  <% @response.organizations.each do |organization| %>
+  <li class="collection-item">
+    <td><%= organization %></td>
+  </li>
+  <% end %>
+</ul>
