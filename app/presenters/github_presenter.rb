@@ -26,6 +26,15 @@ class GithubPresenter
     organizations.map{ |organization| organization.login}
   end
 
+  def commits
+    commits = service.find_user_commits(user).flatten
+  end
+
+  def image(user)
+    user = service.find_user(user)
+    user[:avatar_url]
+  end
+
 
   private
     def build_object(data)

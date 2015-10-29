@@ -15,4 +15,5 @@ class GithubPresenterTest < ActiveSupport::TestCase
     @service ||= GithubPresenter.new(user)
   end
 
+
 end

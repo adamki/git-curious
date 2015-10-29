@@ -44,4 +44,12 @@ class GithubServiceTest < ActiveSupport::TestCase
     end
   end
 
+  test 'find_user_test' do
+    VCR.use_cassette("github_service#find_user") do
+      user = service.find_user("adamki")
+      assert_equal "adamki", user[:login]
+      assert_equal "adajensen@gmail.com", user[:email]
+      assert_equal 10334352, user[:id]
+    end
+  end
 end
